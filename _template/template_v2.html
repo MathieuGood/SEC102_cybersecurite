@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>$title$</title>
+$for(css)$
+  <link rel="stylesheet" href="$css$">
+$endfor$
+</head>
+<body>
+
+<div class="running-footer">$subject$ — $for(author)$$author$$endfor$ — $year$</div>
+
+<div class="cover">
+  <div class="cover-header">
+    <img class="cnam-logo" src="$logo_white$" alt="CNAM">
+  </div>
+  <div class="cover-body">
+    <div class="cover-body-inner">
+      <div class="cover-rule"></div>
+      <h1 class="cover-title">$title$</h1>
+      <div class="cover-meta">
+$if(subject)$
+        <p>$subject$</p>
+$endif$
+$for(author)$
+        <p>$author$</p>
+$endfor$
+$if(date)$
+        <p>$date$</p>
+$endif$
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+$body$
+</div>
+
+</body>
+</html>
